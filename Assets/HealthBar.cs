@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
@@ -9,29 +10,38 @@ public class HealthBar : MonoBehaviour
 
     public int maxHealth;
 
-    public bool[] healthStatus;
+    private int currentHealth;
+
+    public GameObject[] healthBars;
 
     private CharacterController bee;
 
     // Start is called before the first frame update
     void Start()
     {
-        healthStatus = new bool[maxHealth];
-
         bee = FindObjectOfType<CharacterController>();
-
-        for(int i = 0; i < maxHealth; i++)
-        {
-            healthStatus[i] = true;
-        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < maxHealth; i++)
+        currentHealth = bee.GetHealth();
+
+        if (currentHealth >= maxHealth)
         {
-            Debug.Log("health " + i + " = " + healthStatus[i]);
+
+        }
+        else if (currentHealth == maxHealth - 1)
+        {
+            healthBars[0].GetComponent<Image>().sprite = healthEmpty;
+        }
+        else if (currentHealth == maxHealth - 2)
+        {
+            healthBars[1].GetComponent<Image>().sprite = healthEmpty;
+        }
+        else if (currentHealth == maxHealth - 3)
+        {
+            healthBars[2].GetComponent<Image>().sprite = healthEmpty;
         }
     }
 }
