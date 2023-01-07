@@ -1,12 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnPoint : MonoBehaviour
+public class SpawnPoint : Collision
 {
+    public event EventHandler OnPlayerEnter;
+
+    int honey;
+
     public void RespawnPlayer(CharacterController player)
     {
-        player.transform.position = transform.position;
         player.Reset();
+        player.transform.position = transform.position;
+    }
+
+    protected override void CollisionEntry(CharacterController player)
+    {  
+        honey += player.CollectNectar(); 
+        OnPlayerEnter?.Invoke(this, EventArgs.Empty);
+    }
+
+    public int GetHoney()
+    {
+        return honey;
     }
 }

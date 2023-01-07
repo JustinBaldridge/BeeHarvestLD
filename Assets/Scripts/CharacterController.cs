@@ -8,8 +8,11 @@ public class CharacterController : MonoBehaviour
     public event EventHandler OnPlayerDead;
 
     [SerializeField] int maxHealth;
+    [SerializeField] float speed;
     int health;
-    int honey;
+    int pollen;
+    int nectar;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,22 +25,26 @@ public class CharacterController : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = new Vector3(mousePosition.x, mousePosition.y, 0);
+
+            Vector3 target = Vector3.MoveTowards(transform.position, mousePosition, speed * Time.deltaTime);
+            transform.position = new Vector3(target.x, target.y, 0);
+            //transform.position = new Vector3(mousePosition.x, mousePosition.y, 0);
         }
     }
 
     public void AddPickup(int value = 1)
     {
-        honey += value;
-        Debug.Log("CharacterController.cs  honey = " + honey);
+        pollen += value;
+        Debug.Log("CharacterController.cs  pollen = " + pollen);
     }
 
     public bool UsePickup(int value = 1)
     {
-        Debug.Log("CharacterController.cs  honey = "  + honey + ", value = " + value);
-        if (honey < value) return false;
+        Debug.Log("CharacterController.cs  pollen = "  + pollen + ", value = " + value);
+        if (pollen < value) return false;
 
-        honey -= value; 
+        pollen -= value; 
+        nectar += value;
         return true;
     }
 
@@ -52,9 +59,16 @@ public class CharacterController : MonoBehaviour
         }
     }
 
+    public int CollectNectar()
+    {
+        int n = nectar;
+        nectar = 0;
+        return n;
+    }
+
     public void Reset()
     {
         health = maxHealth;
-        honey = 0;
+        pollen = 0;
     }
 }
