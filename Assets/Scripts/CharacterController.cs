@@ -41,36 +41,8 @@ public class CharacterController : MonoBehaviour
         {
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            //body.MovePosition(mousePosition);
             moveDirection = mousePosition - transform.position;
             
-            /*
-            Vector3 testPosition = transform.position;
-            Vector3 lastPosition = transform.position;
-            int counter = 0;
-
-            Collider2D hit;
-            while (Vector3.Distance(testPosition, mousePosition) > Mathf.Epsilon)
-            {
-                testPosition = Vector3.MoveTowards(testPosition, mousePosition, speed);
-                hit = Physics2D.OverlapCircle(testPosition, collisionRadius, collisions);
-                if (hit)
-                {
-                    testPosition = lastPosition;
-                    break;
-                }
-
-                lastPosition = testPosition;
-                counter++;
-                if (counter > 1000000)
-                {
-                    Debug.LogError("CharacterController.cs  Infinite Loop");
-                    break; 
-                }
-            }
-            Vector3 target = testPosition; //Vector3.MoveTowards(transform.position, mousePosition, speed);
-            transform.position = new Vector3(target.x, target.y, 0);
-            //transform.position = new Vector3(mousePosition.x, mousePosition.y, 0); */
         }
         else
         {
@@ -80,7 +52,7 @@ public class CharacterController : MonoBehaviour
     
     void FixedUpdate()
     {
-        controller.Move(moveDirection * Time.deltaTime);
+        controller.Move(moveDirection * speed * Time.deltaTime);
     }
 
     public void AddPickup(int value = 1)

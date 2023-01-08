@@ -17,4 +17,9 @@ public class Objective : Collision
         
         OnAnyObjectiveCompleted?.Invoke(this, EventArgs.Empty);
     }
+
+    protected override void CollisionExit(CharacterController player)
+    {
+        
+    }
 }

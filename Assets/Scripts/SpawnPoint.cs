@@ -21,6 +21,11 @@ public class SpawnPoint : Collision
         OnPlayerEnter?.Invoke(this, EventArgs.Empty);
     }
 
+    protected override void CollisionExit(CharacterController player)
+    {
+        
+    }
+
     public int GetHoney()
     {
         return honey;
