@@ -10,6 +10,7 @@ public class MainMenuManager : MonoBehaviour
     public Button exitApplication;
     public Button credits;
     public Button options;
+    public Sprite[] buttonImages;
 
     public string gameScene;
 
@@ -20,6 +21,11 @@ public class MainMenuManager : MonoBehaviour
         exitApplication.onClick.AddListener(Exit);
         credits.onClick.AddListener(Credits);
         options.onClick.AddListener(Options);
+
+        loadGame.GetComponent<Image>().sprite = buttonImages[Random.Range(0, 4)];
+        exitApplication.GetComponent<Image>().sprite = buttonImages[Random.Range(0, 4)];
+        credits.GetComponent<Image>().sprite = buttonImages[Random.Range(0, 4)];
+        options.GetComponent<Image>().sprite = buttonImages[Random.Range(0, 4)];
     }
 
     private void LoadGame()

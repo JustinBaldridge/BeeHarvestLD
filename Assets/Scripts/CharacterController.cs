@@ -99,4 +99,14 @@ public class CharacterController : MonoBehaviour
     {
         return health;
     }
+
+    public int GetPollen()
+    {
+        return pollen;
+    }
+
+    public int GetNectar()
+    {
+        return nectar;
+    }
 }
