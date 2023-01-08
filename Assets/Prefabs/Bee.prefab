@@ -135,8 +135,10 @@ MonoBehaviour:
   collisions:
     serializedVersion: 2
     m_Bits: 768
+  sprite: {fileID: 8211420263050505767}
   maxHealth: 3
   speed: 5
+  maxTimer: 0
 --- !u!50 &8211420264372533028
 Rigidbody2D:
   serializedVersion: 4
