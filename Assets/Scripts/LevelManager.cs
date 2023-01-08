@@ -1,20 +1,26 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    public event EventHandler OnLevelComplete;
+
     [SerializeField] CharacterController player;
     [SerializeField] SpawnPoint spawnPoint;
-    [SerializeField] List<Collectable> collectables;
-    [SerializeField] List<Objective> objectives;
+    List<Collectable> collectables = new List<Collectable>();
+    List<Objective> objectives = new List<Objective>();
 
     // Start is called before the first frame update
     void Start()
     {
         player.OnPlayerDead += Player_OnPlayerDead;
         spawnPoint.OnPlayerEnter += SpawnPoint_OnPlayerEnter;
+
+        collectables = FindObjectsOfType<Collectable>().ToList();
+        objectives = FindObjectsOfType<Objective>().ToList();
     }
 
     private void Player_OnPlayerDead(object sender, EventArgs e)
@@ -43,6 +49,7 @@ public class LevelManager : MonoBehaviour
         if (completedLevel)
         {
             Debug.Log("LevelManager.cs  Level Complete");
+            OnLevelComplete?.Invoke(this, EventArgs.Empty);
         }
     }
 }

@@ -8,4 +8,9 @@ public class Collectable : Collision
     {
         player.AddPickup();           
     }
+
+    protected override void CollisionExit(CharacterController player)
+    {
+        
+    }
 }
