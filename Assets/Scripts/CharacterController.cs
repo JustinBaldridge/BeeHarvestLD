@@ -75,7 +75,7 @@ public class CharacterController : MonoBehaviour
         mousePosition.z = 0;
         Vector3 dir = mousePosition - transform.position;
         float angle = Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg;
-        sprite.transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
+        sprite.transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
     }
 
     public void AddPickup(int value = 1)

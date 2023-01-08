@@ -63,6 +63,11 @@ public class GameController : MonoBehaviour
         return gameTimer;
     }
 
+    public int GetLevel()
+    {
+        return currentLevel + 1;
+    }
+
     IEnumerator LoadLevel(int index)
     {
         yield return new WaitForSeconds(1.5f);
