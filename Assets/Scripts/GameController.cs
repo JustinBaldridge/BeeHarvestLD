@@ -11,6 +11,9 @@ public class GameController : MonoBehaviour
     [SerializeField] List<string> levels;
 
     int currentLevel = 0;
+    int deaths;
+    float gameTimer;
+
 
     void Awake()
     {
@@ -45,11 +48,24 @@ public class GameController : MonoBehaviour
         currentLevel.OnLevelComplete += LevelManager_OnLevelComplete;
     }
 
-    void LevelManager_OnLevelComplete(object sender, EventArgs e)
+    public void CountDeath()
     {
-        currentLevel++;
+        deaths++;
+    }
 
-        StartCoroutine(LoadLevel(currentLevel));
+    public int GetDeaths()
+    {
+        return deaths;
+    }
+
+    public float GetTimer()
+    {
+        return gameTimer;
+    }
+
+    public int GetLevel()
+    {
+        return currentLevel + 1;
     }
 
     IEnumerator LoadLevel(int index)
@@ -72,5 +88,10 @@ public class GameController : MonoBehaviour
         Initialize();
     }
 
+    void LevelManager_OnLevelComplete(object sender, EventArgs e)
+    {
+        currentLevel++;
 
+        StartCoroutine(LoadLevel(currentLevel));
+    }
 }

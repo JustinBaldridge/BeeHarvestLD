@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851968518483877516}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5447025, y: -0.7640821, z: -758.41876}
+  m_LocalPosition: {x: 1.5447025, y: -0.7640821, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -170,7 +170,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851968519831962968}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4902016, y: 4.1458616, z: -858.50696}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -244,7 +244,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851968520436674245}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4902016, y: 4.1458616, z: -858.50696}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -393,7 +393,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6263635640683454891}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5447025, y: 0.7640821, z: 758.41876}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -418,6 +418,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 5750424275401221181}
     m_Modifications:
+    - target: {fileID: 3340034490037374570, guid: 7a2d96c407481754faae2fb983dbbe01, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3340034491155745719, guid: 7a2d96c407481754faae2fb983dbbe01, type: 3}
       propertyPath: m_Name
       value: DropoffFlower
@@ -436,7 +440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3340034491155745722, guid: 7a2d96c407481754faae2fb983dbbe01, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -758.41876
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3340034491155745722, guid: 7a2d96c407481754faae2fb983dbbe01, type: 3}
       propertyPath: m_LocalRotation.w
@@ -482,6 +486,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 5750424275401221181}
     m_Modifications:
+    - target: {fileID: 5506848927648560759, guid: 159971a9b56b744439cc731dafb2f0ec, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821864983580805543, guid: 159971a9b56b744439cc731dafb2f0ec, type: 3}
+      propertyPath: m_Name
+      value: Sprite
+      objectReference: {fileID: 0}
     - target: {fileID: 8211420264372533024, guid: 159971a9b56b744439cc731dafb2f0ec, type: 3}
       propertyPath: m_Name
       value: Bee
@@ -500,7 +512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8211420264372533025, guid: 159971a9b56b744439cc731dafb2f0ec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -758.41876
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8211420264372533025, guid: 159971a9b56b744439cc731dafb2f0ec, type: 3}
       propertyPath: m_LocalRotation.w
@@ -568,6 +580,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 5750424275401221181}
     m_Modifications:
+    - target: {fileID: 7235696625169874945, guid: d082815751428474ebfee63b365edcd5, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7235696625668787268, guid: d082815751428474ebfee63b365edcd5, type: 3}
       propertyPath: m_Name
       value: PickupFlower
@@ -586,7 +602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7235696625668787269, guid: d082815751428474ebfee63b365edcd5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -758.41876
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7235696625668787269, guid: d082815751428474ebfee63b365edcd5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -632,6 +648,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 5750424275401221181}
     m_Modifications:
+    - target: {fileID: 5977747394809612104, guid: 6d13a1e671b8d9547ba7a83e476d3e3c, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5977747396203957268, guid: 6d13a1e671b8d9547ba7a83e476d3e3c, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -646,7 +666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5977747396203957268, guid: 6d13a1e671b8d9547ba7a83e476d3e3c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -758.41876
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5977747396203957268, guid: 6d13a1e671b8d9547ba7a83e476d3e3c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -721,7 +741,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6426717504802333181, guid: 1b6e49c2d31356441bfa6b1c03742674, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -758.41876
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6426717504802333181, guid: 1b6e49c2d31356441bfa6b1c03742674, type: 3}
       propertyPath: m_LocalRotation.w

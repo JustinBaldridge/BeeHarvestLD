@@ -15,6 +15,8 @@ public class WaypointTravel : MonoBehaviour
     float percentBetweenWaypoint;
     float nextMoveTime;
 
+    SpriteRenderer sprite;
+    Vector3 velocity;
     void Start()
     {
         globalWaypoints = new Vector3[localWaypoints.Length];
@@ -22,12 +24,23 @@ public class WaypointTravel : MonoBehaviour
         {
             globalWaypoints[i] = localWaypoints[i] + transform.position;
         }
+
+        sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
     void Update()
     {
-        Vector3 velocity = CalculatePlatformMovement();
+        velocity = CalculatePlatformMovement();
         transform.Translate(velocity);
+    }
+
+    void LateUpdate()
+    {   
+        //Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //mousePosition.z = 0;
+        //Vector3 dir = (transform.position + ) - transform.position;
+        float angle = Mathf.Atan2(velocity.y,velocity.x) * Mathf.Rad2Deg;
+        sprite.transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
     }
 
     float Ease(float x)

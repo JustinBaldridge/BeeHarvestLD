@@ -8,8 +8,10 @@ public class CharacterController : MonoBehaviour
     public event EventHandler OnPlayerDead;
 
     [SerializeField] LayerMask collisions;
+    [SerializeField] SpriteRenderer sprite; 
     [SerializeField] int maxHealth;
     [SerializeField] float speed;
+    [SerializeField] float maxTimer;
 
     //CircleCollider2D circleCollider; 
     Rigidbody2D body;
@@ -22,6 +24,9 @@ public class CharacterController : MonoBehaviour
     float collisionRadius;
 
     Vector2 moveDirection;
+    bool isDamageTimer;
+    float damageTimer;
+
 
     // Start is called before the first frame update
     void Start()
@@ -41,18 +46,36 @@ public class CharacterController : MonoBehaviour
         {
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            moveDirection = mousePosition - transform.position;
-            
+            moveDirection = mousePosition - transform.position; 
         }
         else
         {
             moveDirection = Vector2.zero;
+        }
+
+        if (isDamageTimer)
+        {
+            if (damageTimer > maxTimer)
+            {
+                TakeDamage();
+                damageTimer = 0;
+            }
+            else {damageTimer += Time.deltaTime; }
         }
     }
     
     void FixedUpdate()
     {
         controller.Move(moveDirection * speed * Time.deltaTime);
+    }
+
+    void LateUpdate()
+    {   
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition.z = 0;
+        Vector3 dir = mousePosition - transform.position;
+        float angle = Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg;
+        sprite.transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
     }
 
     public void AddPickup(int value = 1)
@@ -92,6 +115,7 @@ public class CharacterController : MonoBehaviour
     public void Reset()
     {
         health = maxHealth;
+        SetDamageTimer(false);
         pollen = 0;
     }
 
@@ -108,5 +132,10 @@ public class CharacterController : MonoBehaviour
     public int GetNectar()
     {
         return nectar;
+    }
+    
+    public void SetDamageTimer(bool value)
+    {
+        isDamageTimer = value;
     }
 }
