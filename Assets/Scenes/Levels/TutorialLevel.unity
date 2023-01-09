@@ -291,7 +291,7 @@ MonoBehaviour:
   levels:
   - TutorialLevel
   - TutorialBear
-  - TutorialCar
+  - TutorialCars
   - CongaLine
   - 
   - 
@@ -452,6 +452,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081517702}
   m_CullTransparentMesh: 1
+--- !u!114 &1509733512 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5972482702518198139, guid: 3d8e3a33f19a7644f9783d2a6fae91cc, type: 3}
+  m_PrefabInstance: {fileID: 1641917678}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e2d5b1660163ab4f87af6173f1243c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1641917678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -478,7 +489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2282507387773905627, guid: 3d8e3a33f19a7644f9783d2a6fae91cc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2704661676295629095, guid: 3d8e3a33f19a7644f9783d2a6fae91cc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11720,6 +11731,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8962079029607108348, guid: 3d8e3a33f19a7644f9783d2a6fae91cc, type: 3}
+      propertyPath: levelManager
+      value: 
+      objectReference: {fileID: 1509733512}
     m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6016906579199770565, guid: 3d8e3a33f19a7644f9783d2a6fae91cc, type: 3}
@@ -11865,6 +11880,10 @@ PrefabInstance:
     - target: {fileID: 4200964631181700450, guid: 52ec9327d80ed5a44b78ea0804216a7c, type: 3}
       propertyPath: m_Name
       value: tutorial blurb
+      objectReference: {fileID: 0}
+    - target: {fileID: 4200964631181700450, guid: 52ec9327d80ed5a44b78ea0804216a7c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

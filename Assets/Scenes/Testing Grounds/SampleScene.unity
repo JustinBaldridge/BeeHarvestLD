@@ -743,6 +743,7 @@ MonoBehaviour:
   maxHealth: 3
   speed: 10
   maxTimer: 3.25
+  invincibleTimer: 0
 --- !u!50 &570986036
 Rigidbody2D:
   serializedVersion: 4
@@ -1189,9 +1190,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81209ddeb2330ca4baa4e7e6a4066543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bee: {fileID: 0}
   levels:
   - TestLevel0
   - TestLevel1
+  endUI: {fileID: 0}
+  honeyFill: {fileID: 0}
 --- !u!4 &1685655079
 Transform:
   m_ObjectHideFlags: 0

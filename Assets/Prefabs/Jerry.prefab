@@ -74,6 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58789c6d23afe88459997725ebc7f87d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprite: {fileID: 2083740000801325062}
   attackHitbox: {fileID: 2083740001961585370}
   attackTimer: 1.5
   attackDuration: 0.1
