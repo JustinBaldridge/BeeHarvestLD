@@ -325,6 +325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
+  - TutorialLevel
   - TutorialBear
   - TutorialCar
   - CongaLine

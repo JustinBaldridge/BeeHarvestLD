@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Initialize();
     }
 
     void Update()
@@ -43,9 +43,9 @@ public class GameController : MonoBehaviour
 
     void Initialize()
     {
-        LevelManager currentLevel = FindObjectOfType<LevelManager>();   
+        LevelManager level = FindObjectOfType<LevelManager>();   
         
-        currentLevel.OnLevelComplete += LevelManager_OnLevelComplete;
+        level.OnLevelComplete += LevelManager_OnLevelComplete;
     }
 
     public void CountDeath()
@@ -72,6 +72,7 @@ public class GameController : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
 
+        Debug.Log("GameController.cs  CHecking level count, currentLevel: " + currentLevel + ", levels count: " + levels.Count);
         // Game Complete
         if (currentLevel >= levels.Count)
         {
@@ -79,7 +80,9 @@ public class GameController : MonoBehaviour
         }
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(levels[currentLevel]);
-
+        
+        
+        Debug.Log("GameController.cs  waiting for level to lead.");
         while (!asyncLoad.isDone)
         {
             yield return null;
@@ -91,7 +94,7 @@ public class GameController : MonoBehaviour
     void LevelManager_OnLevelComplete(object sender, EventArgs e)
     {
         currentLevel++;
-
+        Debug.Log("GameController.cs  currentLevel = " +  currentLevel);
         StartCoroutine(LoadLevel(currentLevel));
     }
 }
