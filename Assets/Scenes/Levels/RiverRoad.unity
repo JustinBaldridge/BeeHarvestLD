@@ -7315,6 +7315,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4328554348220358160, guid: 014cc1aad3af9774f8394eaeb325dfe5, type: 3}
+      propertyPath: localWaypoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328554348220358160, guid: 014cc1aad3af9774f8394eaeb325dfe5, type: 3}
       propertyPath: localWaypoints.Array.data[0].x
       value: 0
       objectReference: {fileID: 0}
@@ -7332,19 +7336,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4328554348220358160, guid: 014cc1aad3af9774f8394eaeb325dfe5, type: 3}
       propertyPath: localWaypoints.Array.data[2].x
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4328554348220358160, guid: 014cc1aad3af9774f8394eaeb325dfe5, type: 3}
       propertyPath: localWaypoints.Array.data[2].y
-      value: -9
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4328554348220358160, guid: 014cc1aad3af9774f8394eaeb325dfe5, type: 3}
       propertyPath: localWaypoints.Array.data[3].x
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4328554348220358160, guid: 014cc1aad3af9774f8394eaeb325dfe5, type: 3}
       propertyPath: localWaypoints.Array.data[3].y
-      value: 4
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 4328554348220358161, guid: 014cc1aad3af9774f8394eaeb325dfe5, type: 3}
       propertyPath: m_RootOrder
