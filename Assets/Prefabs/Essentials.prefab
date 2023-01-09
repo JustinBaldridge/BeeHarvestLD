@@ -1140,6 +1140,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grid
       objectReference: {fileID: 0}
+    - target: {fileID: 4191821253835919930, guid: c33218ec3e8de9c45aad8b5effbe021c, type: 3}
+      propertyPath: m_UsedByComposite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: c33218ec3e8de9c45aad8b5effbe021c, type: 3}

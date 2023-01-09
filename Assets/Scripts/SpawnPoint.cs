@@ -13,6 +13,7 @@ public class SpawnPoint : Collision
     {
         player.Reset();
         player.transform.position = transform.position;
+        Reset();
     }
 
     protected override void CollisionEntry(CharacterController player)
@@ -25,6 +26,11 @@ public class SpawnPoint : Collision
     protected override void CollisionExit(CharacterController player)
     {
         
+    }
+
+    public override void Reset()
+    {
+        honey = 0;
     }
 
     public int GetHoney()

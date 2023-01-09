@@ -30,6 +30,11 @@ public abstract class Collision : MonoBehaviour
         }
     }
 
+    public virtual void Reset()
+    {
+        active = true;
+    }
+
     public bool IsActive()
     {
         return active;
