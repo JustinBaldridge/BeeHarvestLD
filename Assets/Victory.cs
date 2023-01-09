@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Victory : MonoBehaviour
 {
     float fillPercent;
+    public float timeToWait;
     public Image honeyToFill;
     
     // Start is called before the first frame update
@@ -21,7 +22,7 @@ public class Victory : MonoBehaviour
 
     private IEnumerator GameReset()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(timeToWait);
         SceneManager.LoadScene(1);
     }
 }
