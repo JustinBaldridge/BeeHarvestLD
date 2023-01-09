@@ -73,5 +73,5 @@ MonoBehaviour:
   - _musicOption: 2
     _track: {fileID: 8300000, guid: 202c3eb288d0f9c44875c7a5db038d4e, type: 3}
   - _musicOption: 3
-    _track: {fileID: 0}
+    _track: {fileID: 8300000, guid: 7917941c82a6f8343acf5ec5f85fd486, type: 3}
   _numSoundEffectSources: 10
