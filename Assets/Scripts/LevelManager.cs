@@ -35,6 +35,7 @@ public class LevelManager : MonoBehaviour
 
     private void SpawnPoint_OnPlayerEnter(object sender, EventArgs e)
     {
+        Debug.Log("LevelManager.cs  player enter");
         bool completedLevel = true;
         
         // Checks if each objective has been completed
@@ -46,10 +47,12 @@ public class LevelManager : MonoBehaviour
                 return;
             }
         }
-
+        
+        Debug.Log("LevelManager.cs  completed Level, objectives complete: " + completedLevel);
         // Checks if there is the correct amount of honey stored
         completedLevel = spawnPoint.GetHoney() == objectives.Count;
-
+        
+        Debug.Log("LevelManager.cs  completed Level, honey number: " + completedLevel + ", " + spawnPoint.GetHoney());
 
         if (completedLevel)
         {

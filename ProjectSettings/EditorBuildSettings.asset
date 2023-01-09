@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/CongaLine.unity
     guid: 8e277a961eccc5b479e5e956587b8425
+  - enabled: 1
+    path: Assets/Scenes/Levels/RiverRoad.unity
+    guid: 447492a148abadb4b87cfa8f63cbf922
   m_configObjects: {}

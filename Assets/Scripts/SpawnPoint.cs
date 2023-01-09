@@ -19,6 +19,7 @@ public class SpawnPoint : Collision
     {  
         honey += player.CollectNectar(); 
         OnPlayerEnter?.Invoke(this, EventArgs.Empty);
+        active = true;
     }
 
     protected override void CollisionExit(CharacterController player)
