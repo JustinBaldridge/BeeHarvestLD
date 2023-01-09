@@ -18,29 +18,44 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/TutorialBear.unity
     guid: bf34d3b109c518f428a676bb749995ed
   - enabled: 1
+    path: Assets/Scenes/Levels/Goldilocks.unity
+    guid: ac28bcebf837d914881f550548604c8b
+  - enabled: 1
+    path: Assets/Scenes/Levels/HideAndSeek.unity
+    guid: 4169db28b72c5ca4092af2e5587afdf4
+  - enabled: 1
     path: Assets/Scenes/Levels/TutorialCars.unity
     guid: 5d681b2bbb287154cbf0545fbbce83fc
-  - enabled: 1
-    path: Assets/Scenes/Levels/TutorialJS.unity
-    guid: 1a051005dca5813488ab90b92e3fca79
-  - enabled: 1
-    path: Assets/Scenes/Levels/CongaLine.unity
-    guid: 8e277a961eccc5b479e5e956587b8425
   - enabled: 1
     path: Assets/Scenes/Levels/RiverRoad.unity
     guid: 447492a148abadb4b87cfa8f63cbf922
   - enabled: 1
-    path: Assets/Scenes/Levels/ThreesACrowd.unity
-    guid: f667a54980188db4c8811dcdd9fa8c90
+    path: Assets/Scenes/Levels/PlusSign.unity
+    guid: 7f0ad06dc48ab754daf3efd9f465b3f1
+  - enabled: 1
+    path: Assets/Scenes/Levels/CongaLine.unity
+    guid: 8e277a961eccc5b479e5e956587b8425
+  - enabled: 1
+    path: Assets/Scenes/Levels/Racetrack.unity
+    guid: 96fb8f5dd4775434f973fc233cb16bcd
+  - enabled: 1
+    path: Assets/Scenes/Levels/TutorialJS.unity
+    guid: 1a051005dca5813488ab90b92e3fca79
   - enabled: 1
     path: Assets/Scenes/Levels/CloseQuarters.unity
     guid: d59dcb7f3e109134da82624d1cfa32f7
   - enabled: 1
+    path: Assets/Scenes/Levels/SeinfeldEpisode.unity
+    guid: ef28985a4e0ec2247a47dd86c0dc9916
+  - enabled: 1
     path: Assets/Scenes/Levels/QuickSand.unity
     guid: efd71676bef5f7c409fa526d03dee5ea
   - enabled: 1
-    path: Assets/Scenes/Levels/HideAndSeek.unity
-    guid: 4169db28b72c5ca4092af2e5587afdf4
+    path: Assets/Scenes/Levels/ThreesACrowd.unity
+    guid: f667a54980188db4c8811dcdd9fa8c90
+  - enabled: 1
+    path: Assets/Scenes/Levels/Run.unity
+    guid: d820f6db314b42d4d941946f6b528d7f
   - enabled: 1
     path: Assets/Scenes/Levels/52.unity
     guid: 4b6814ba1df404841b016c34ca89edf9
