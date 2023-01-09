@@ -12474,6 +12474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c22437a574d16ee488c91c73908ec9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToWait: 16
   honeyToFill: {fileID: 1823561629}
 --- !u!4 &1582662912
 Transform:
