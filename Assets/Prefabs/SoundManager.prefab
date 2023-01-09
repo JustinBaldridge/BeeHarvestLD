@@ -67,11 +67,11 @@ MonoBehaviour:
     _clip: {fileID: 8300000, guid: 3516b987202159d4c97e59b7b321fa88, type: 3}
   _musicTracks:
   - _musicOption: 0
-    _track: {fileID: 0}
+    _track: {fileID: 8300000, guid: 202c3eb288d0f9c44875c7a5db038d4e, type: 3}
   - _musicOption: 1
-    _track: {fileID: 0}
+    _track: {fileID: 8300000, guid: 5513a86d5c0deeb438f30516833d7748, type: 3}
   - _musicOption: 2
-    _track: {fileID: 0}
+    _track: {fileID: 8300000, guid: 202c3eb288d0f9c44875c7a5db038d4e, type: 3}
   - _musicOption: 3
     _track: {fileID: 0}
   _numSoundEffectSources: 10

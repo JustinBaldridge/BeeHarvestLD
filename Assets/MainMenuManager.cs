@@ -20,6 +20,8 @@ public class MainMenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SoundManager.Instance.PlayMusic(Music.title);
+        
         loadGame.onClick.AddListener(LoadGame);
         exitApplication.onClick.AddListener(Exit);
         credits.onClick.AddListener(Credits);

@@ -178,3 +178,4 @@ MonoBehaviour:
   cyclic: 1
   waitTime: 0
   easeAmount: 0
+  isCar: 1
