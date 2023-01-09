@@ -15,6 +15,9 @@ public class WaypointTravel : MonoBehaviour
     float percentBetweenWaypoint;
     float nextMoveTime;
 
+    public bool isCar;
+
+
     SpriteRenderer sprite;
     Vector3 velocity;
     void Start()
@@ -26,6 +29,8 @@ public class WaypointTravel : MonoBehaviour
         }
 
         sprite = GetComponentInChildren<SpriteRenderer>();
+
+        StartCoroutine(SoundEffect());
     }
 
     void Update()
@@ -90,6 +95,20 @@ public class WaypointTravel : MonoBehaviour
                 Gizmos.DrawLine(globalWaypointPos - Vector3.up * size, globalWaypointPos + Vector3.up * size);
                 Gizmos.DrawLine(globalWaypointPos - Vector3.left * size, globalWaypointPos + Vector3.left * size);
             }
+        }
+    }
+
+    private IEnumerator SoundEffect()
+    {
+        if(isCar)
+        {
+            yield return new WaitForSeconds(Random.Range(2.5f, 5));
+            SoundManager.Instance.PlaySound(Sound.carSFX);
+        }
+        else
+        {
+            yield return new WaitForSeconds(Random.Range(2.5f, 5));
+            SoundManager.Instance.PlaySound(Sound.bearSFX);
         }
     }
 }

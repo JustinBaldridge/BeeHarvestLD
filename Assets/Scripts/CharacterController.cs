@@ -60,6 +60,7 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
+            
             dragging = false;
         }
 
@@ -96,10 +97,12 @@ public class CharacterController : MonoBehaviour
     void OnMouseDown()
     {
         dragging = true;
+        SoundManager.Instance.PlaySound(Sound.movementSFX);
     }
 
     public void AddPickup(int value = 1)
     {
+        SoundManager.Instance.PlaySound(Sound.collectPollen);
         pollen += value;
         Debug.Log("CharacterController.cs  pollen = " + pollen);
     }
@@ -108,7 +111,7 @@ public class CharacterController : MonoBehaviour
     {
         Debug.Log("CharacterController.cs  pollen = "  + pollen + ", value = " + value);
         if (pollen < value) return false;
-
+        SoundManager.Instance.PlaySound(Sound.collectNectar);
         pollen -= value; 
         nectar += value;
         return true;
@@ -117,6 +120,7 @@ public class CharacterController : MonoBehaviour
     public void TakeDamage(int value = 1)
     {
         if (invincible > 0) return;
+        SoundManager.Instance.PlaySound(Sound.takeDamage);
         health -= 1;
         Debug.Log("CharacterController.cs  health = " + health);
         invincible = invincibleTimer; 

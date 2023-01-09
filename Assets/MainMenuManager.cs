@@ -33,21 +33,25 @@ public class MainMenuManager : MonoBehaviour
 
     private void LoadGame()
     {
+        SoundManager.Instance.PlaySound(Sound.buttonSFX);
         SceneManager.LoadScene(gameScene);
     }
 
     private void Exit()
     {
+        SoundManager.Instance.PlaySound(Sound.buttonSFX);
         Application.Quit();
     }
 
     private void Credits()
     {
+        SoundManager.Instance.PlaySound(Sound.buttonSFX);
         SceneManager.LoadScene(1);
     }
 
     private void Options()
     {
+        SoundManager.Instance.PlaySound(Sound.buttonSFX);
         int length = buttonImages.Length;
         Sprite sprite = options.GetComponent<Image>().sprite;
         for(int i = 0; i < length; i++)

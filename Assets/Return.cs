@@ -16,6 +16,7 @@ public class Return : MonoBehaviour
 
     private void ReturnToMenu()
     {
+        SoundManager.Instance.PlaySound(Sound.buttonSFX);
         SceneManager.LoadScene(0);
     }
 }
