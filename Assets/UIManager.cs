@@ -20,7 +20,9 @@ public class UIManager : MonoBehaviour
     {
         bee = FindObjectOfType<CharacterController>();
 
-        //GameController.Instance.GetLevel();
+        int level = GameController.Instance.GetLevel();
+
+        levelText.text = ("Level " + level.ToString());
     }
 
     // Update is called once per frame

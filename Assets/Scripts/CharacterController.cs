@@ -124,6 +124,11 @@ public class CharacterController : MonoBehaviour
         return health;
     }
 
+    public int GetMaxHealth()
+    {
+        return maxHealth;
+    }
+
     public int GetPollen()
     {
         return pollen;

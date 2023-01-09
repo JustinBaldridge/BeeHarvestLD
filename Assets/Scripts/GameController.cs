@@ -3,12 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    public static GameController Instance; 
+    public static GameController Instance;
+
+    public CharacterController bee;
 
     [SerializeField] List<string> levels;
+
+    public Image endUI;
+    public Image honeyFill;
 
     int currentLevel = 0;
     int deaths;
@@ -33,17 +39,15 @@ public class GameController : MonoBehaviour
         Initialize();
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StartCoroutine(LoadLevel(currentLevel));
-        }
-    }
-
     void Initialize()
     {
-        LevelManager level = FindObjectOfType<LevelManager>();   
+        LevelManager level = FindObjectOfType<LevelManager>();
+
+        bee = FindObjectOfType<CharacterController>();
+
+        endUI = FindObjectOfType<Image>();
+
+        endUI.gameObject.SetActive(false);
         
         level.OnLevelComplete += LevelManager_OnLevelComplete;
     }
@@ -68,11 +72,24 @@ public class GameController : MonoBehaviour
         return currentLevel + 1;
     }
 
+    public
+
+    IEnumerator FinishLevel(int health)
+    {
+        endUI.gameObject.SetActive(true);
+        bee.gameObject.SetActive(false);
+        int maxHealth = bee.GetMaxHealth();
+        honeyFill.GetComponent<Image>().fillAmount += (health / maxHealth) / levels.Count;
+        yield return new WaitForSeconds(1.5f);
+        endUI.gameObject.SetActive(false);
+        StartCoroutine(LoadLevel(currentLevel));
+    }
+    
     IEnumerator LoadLevel(int index)
     {
         yield return new WaitForSeconds(1.5f);
 
-        Debug.Log("GameController.cs  CHecking level count, currentLevel: " + currentLevel + ", levels count: " + levels.Count);
+        Debug.Log("GameController.cs  CHecking level count, currentLevel: " + currentLevel + ", levels count: " + levels.Count) ;
         // Game Complete
         if (currentLevel >= levels.Count)
         {
@@ -93,8 +110,10 @@ public class GameController : MonoBehaviour
 
     void LevelManager_OnLevelComplete(object sender, EventArgs e)
     {
+        int beeHealth = bee.GetHealth();
         currentLevel++;
         Debug.Log("GameController.cs  currentLevel = " +  currentLevel);
-        StartCoroutine(LoadLevel(currentLevel));
+        StartCoroutine(FinishLevel(beeHealth));
+        //StartCoroutine(LoadLevel(currentLevel));
     }
 }
