@@ -47,9 +47,7 @@ public class GameController : MonoBehaviour
 
         bee = FindObjectOfType<CharacterController>();
 
-        endUI = FindObjectOfType<Image>();
-
-        ///endUI.gameObject.SetActive(false);
+        //endUI.gameObject.SetActive(false);
         
         level.OnLevelComplete += LevelManager_OnLevelComplete;
     }
