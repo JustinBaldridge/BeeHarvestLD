@@ -29,7 +29,10 @@ public class HealthBar : MonoBehaviour
 
         if (currentHealth >= maxHealth)
         {
-
+            for (int i = 0; i < healthBars.Length; i++)
+            {
+                healthBars[i].GetComponent<Image>().sprite = healthFull;
+            }
         }
         else if (currentHealth == maxHealth - 1)
         {

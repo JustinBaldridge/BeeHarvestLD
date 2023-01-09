@@ -46,4 +46,5 @@ public class PulseAttack : MonoBehaviour
         
         timer = 0;
     }
+
 }

@@ -143,6 +143,8 @@ public class CharacterController : MonoBehaviour
         health = maxHealth;
         SetDamageTimer(false);
         pollen = 0;
+        nectar = 0;
+        dragging = false;
     }
 
     public int GetHealth()

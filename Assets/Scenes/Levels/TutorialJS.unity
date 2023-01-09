@@ -6711,11 +6711,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2083740000594796551, guid: ecd04017ebcacd74daaf8f41f9935afa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2083740000594796551, guid: ecd04017ebcacd74daaf8f41f9935afa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.52
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2083740000594796551, guid: ecd04017ebcacd74daaf8f41f9935afa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6748,14 +6748,6 @@ PrefabInstance:
     - target: {fileID: 2083740000594796551, guid: ecd04017ebcacd74daaf8f41f9935afa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2083740000801325061, guid: ecd04017ebcacd74daaf8f41f9935afa, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 2083740000801325061, guid: ecd04017ebcacd74daaf8f41f9935afa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 2083740000801325062, guid: ecd04017ebcacd74daaf8f41f9935afa, type: 3}
       propertyPath: m_SortingLayer
@@ -6792,14 +6784,6 @@ PrefabInstance:
     - target: {fileID: 2083740001961585370, guid: ecd04017ebcacd74daaf8f41f9935afa, type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2083740001961585371, guid: ecd04017ebcacd74daaf8f41f9935afa, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 2083740001961585371, guid: ecd04017ebcacd74daaf8f41f9935afa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.49
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

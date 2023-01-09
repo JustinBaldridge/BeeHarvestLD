@@ -31,6 +31,15 @@ public class LevelManager : MonoBehaviour
     private void Player_OnPlayerDead(object sender, EventArgs e)
     {
         spawnPoint.RespawnPlayer(player);
+        foreach (Collectable collectable in collectables)
+        {
+            collectable.Reset();
+        }
+
+        foreach (Objective objective in objectives)
+        {
+            objective.Reset();
+        }
     }
 
     private void SpawnPoint_OnPlayerEnter(object sender, EventArgs e)
