@@ -407,9 +407,65 @@ Transform:
   - {fileID: 2704661676295629095}
   - {fileID: 8033460824031549426}
   - {fileID: 6016906579199770565}
+  - {fileID: 4673628337175899639}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6829087310564327765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4673628337175899639}
+  - component: {fileID: 409002953571862538}
+  m_Layer: 0
+  m_Name: FlowerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4673628337175899639
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6829087310564327765}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5750424275401221181}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &409002953571862538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6829087310564327765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a68e1d582900140b7ec2bd75ab5723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flowerPairs:
+  - normalFlower: {fileID: 21300000, guid: d640aab0a6240a64d8b577dfb5093025, type: 3}
+    wiltedFlower: {fileID: 21300000, guid: 341b7b88ef7b6ee4a83833b663a383ca, type: 3}
+  - normalFlower: {fileID: 21300000, guid: 397b095d18e09f342a7da0f1013036fd, type: 3}
+    wiltedFlower: {fileID: 21300000, guid: 6cc37de7f7f2ec24bbaca13fccfe8e7b, type: 3}
+  - normalFlower: {fileID: 21300000, guid: a08a3cf9969232543a575458f25d62bb, type: 3}
+    wiltedFlower: {fileID: 21300000, guid: deb376adefa63a94eadde649b15b7813, type: 3}
+  - normalFlower: {fileID: 21300000, guid: 7b32044c096af5c47a99a4ac376d9bd0, type: 3}
+    wiltedFlower: {fileID: 21300000, guid: 3d966645a0647654bafdb90ed6edfdb9, type: 3}
+  - normalFlower: {fileID: 21300000, guid: dcf5b0ff3a5a2734fad0eb43b954d05c, type: 3}
+    wiltedFlower: {fileID: 21300000, guid: 4b795f5bbabae434796d43191d965f25, type: 3}
 --- !u!1001 &851968518681436829
 PrefabInstance:
   m_ObjectHideFlags: 0

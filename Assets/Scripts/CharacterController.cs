@@ -13,10 +13,14 @@ public class CharacterController : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float maxTimer;
 
+    [SerializeField] float invincibleTimer;
+
     //CircleCollider2D circleCollider; 
     Rigidbody2D body;
     Controller2D controller;
 
+    bool dragging;
+    
     int health;
     int pollen;
     int nectar;
@@ -26,6 +30,7 @@ public class CharacterController : MonoBehaviour
     Vector2 moveDirection;
     bool isDamageTimer;
     float damageTimer;
+    float invincible; 
 
 
     // Start is called before the first frame update
@@ -42,7 +47,7 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (dragging && Input.GetMouseButton(0))
         {
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
@@ -53,6 +58,11 @@ public class CharacterController : MonoBehaviour
             moveDirection = Vector2.zero;
         }
 
+        if (Input.GetMouseButtonUp(0))
+        {
+            dragging = false;
+        }
+
         if (isDamageTimer)
         {
             if (damageTimer > maxTimer)
@@ -61,6 +71,11 @@ public class CharacterController : MonoBehaviour
                 damageTimer = 0;
             }
             else {damageTimer += Time.deltaTime; }
+        }
+
+        if (invincible > 0)
+        {
+            invincible -= Time.deltaTime;
         }
     }
     
@@ -76,6 +91,11 @@ public class CharacterController : MonoBehaviour
         Vector3 dir = mousePosition - transform.position;
         float angle = Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg;
         sprite.transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+    }
+
+    void OnMouseDown()
+    {
+        dragging = true;
     }
 
     public void AddPickup(int value = 1)
@@ -96,8 +116,10 @@ public class CharacterController : MonoBehaviour
 
     public void TakeDamage(int value = 1)
     {
+        if (invincible > 0) return;
         health -= 1;
         Debug.Log("CharacterController.cs  health = " + health);
+        invincible = invincibleTimer; 
         if (health <= 0)
         {
             OnPlayerDead?.Invoke(this, EventArgs.Empty);

@@ -6,6 +6,7 @@ using UnityEngine;
 public class Objective : Collision
 {
     public static event EventHandler OnAnyObjectiveCompleted;
+    public event EventHandler OnObjectiveCompleted;
 
     protected override void CollisionEntry(CharacterController player)
     {
@@ -16,6 +17,7 @@ public class Objective : Collision
         }        
         
         OnAnyObjectiveCompleted?.Invoke(this, EventArgs.Empty);
+        OnObjectiveCompleted?.Invoke(this, EventArgs.Empty);
     }
 
     protected override void CollisionExit(CharacterController player)

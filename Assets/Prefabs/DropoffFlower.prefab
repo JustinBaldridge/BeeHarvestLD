@@ -73,8 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: -1336318443
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.2251691, g: 0.26899743, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 3d966645a0647654bafdb90ed6edfdb9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 3340034491155745722}
   - component: {fileID: 3340034491155745721}
   - component: {fileID: 3340034491155745720}
+  - component: {fileID: 997809360025379135}
   m_Layer: 7
   m_Name: DropoffFlower
   m_TagString: Untagged
@@ -116,7 +117,7 @@ Transform:
   m_Children:
   - {fileID: 3340034490037374569}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &3340034491155745721
 BoxCollider2D:
@@ -156,3 +157,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec1ee40e33960d4f817c15b3b6a16eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &997809360025379135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3340034491155745719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24ebeb450cca8843abc33c44c778290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 3340034490037374570}

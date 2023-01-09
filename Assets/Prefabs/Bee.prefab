@@ -120,7 +120,7 @@ Transform:
   m_Children:
   - {fileID: 8009279838280989140}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8211420264372533026
 MonoBehaviour:
@@ -140,7 +140,8 @@ MonoBehaviour:
   sprite: {fileID: 5506848927648560759}
   maxHealth: 3
   speed: 5
-  maxTimer: 0
+  maxTimer: 1.5
+  invincibleTimer: 0.2
 --- !u!50 &8211420264372533028
 Rigidbody2D:
   serializedVersion: 4
