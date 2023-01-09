@@ -5280,6 +5280,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a08a3cf9969232543a575458f25d62bb, type: 3}
   - {fileID: 21300000, guid: 7b32044c096af5c47a99a4ac376d9bd0, type: 3}
   - {fileID: 21300000, guid: dcf5b0ff3a5a2734fad0eb43b954d05c, type: 3}
+  wiltedImages:
+  - {fileID: 21300000, guid: 341b7b88ef7b6ee4a83833b663a383ca, type: 3}
+  - {fileID: 21300000, guid: 6cc37de7f7f2ec24bbaca13fccfe8e7b, type: 3}
+  - {fileID: 21300000, guid: deb376adefa63a94eadde649b15b7813, type: 3}
+  - {fileID: 21300000, guid: 3d966645a0647654bafdb90ed6edfdb9, type: 3}
+  - {fileID: 21300000, guid: 4b795f5bbabae434796d43191d965f25, type: 3}
+  optionsUNAVAILABLE: {fileID: 1616093540}
   gameScene: TutorialLevel
 --- !u!4 &746582963
 Transform:

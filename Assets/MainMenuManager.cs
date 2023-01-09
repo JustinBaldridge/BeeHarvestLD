@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class MainMenuManager : MonoBehaviour
     public Button credits;
     public Button options;
     public Sprite[] buttonImages;
+    public Sprite[] wiltedImages;
+    public TextMeshProUGUI optionsUNAVAILABLE;
 
     public string gameScene;
 
@@ -40,11 +43,25 @@ public class MainMenuManager : MonoBehaviour
 
     private void Credits()
     {
-
+        SceneManager.LoadScene(1);
     }
 
     private void Options()
     {
+        int length = buttonImages.Length;
+        Sprite sprite = options.GetComponent<Image>().sprite;
+        for(int i = 0; i < length; i++)
+        {
+            if(sprite == buttonImages[i])
+            {
+                options.GetComponent<Image>().sprite = wiltedImages[i];
+            }
+            else
+            {
 
+            }
+        }
+
+        optionsUNAVAILABLE.text = "NOT YET\n:p";
     }
 }
