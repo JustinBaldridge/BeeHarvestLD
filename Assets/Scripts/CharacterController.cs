@@ -13,6 +13,8 @@ public class CharacterController : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float maxTimer;
 
+    [SerializeField] float invincibleTimer;
+
     //CircleCollider2D circleCollider; 
     Rigidbody2D body;
     Controller2D controller;
@@ -28,6 +30,7 @@ public class CharacterController : MonoBehaviour
     Vector2 moveDirection;
     bool isDamageTimer;
     float damageTimer;
+    float invincible; 
 
 
     // Start is called before the first frame update
@@ -69,6 +72,11 @@ public class CharacterController : MonoBehaviour
             }
             else {damageTimer += Time.deltaTime; }
         }
+
+        if (invincible > 0)
+        {
+            invincible -= Time.deltaTime;
+        }
     }
     
     void FixedUpdate()
@@ -108,8 +116,10 @@ public class CharacterController : MonoBehaviour
 
     public void TakeDamage(int value = 1)
     {
+        if (invincible > 0) return;
         health -= 1;
         Debug.Log("CharacterController.cs  health = " + health);
+        invincible = invincibleTimer; 
         if (health <= 0)
         {
             OnPlayerDead?.Invoke(this, EventArgs.Empty);
