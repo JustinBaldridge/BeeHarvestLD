@@ -17,6 +17,8 @@ public class CharacterController : MonoBehaviour
     Rigidbody2D body;
     Controller2D controller;
 
+    bool dragging;
+    
     int health;
     int pollen;
     int nectar;
@@ -42,7 +44,7 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (dragging && Input.GetMouseButton(0))
         {
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
@@ -51,6 +53,11 @@ public class CharacterController : MonoBehaviour
         else
         {
             moveDirection = Vector2.zero;
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            dragging = false;
         }
 
         if (isDamageTimer)
@@ -76,6 +83,11 @@ public class CharacterController : MonoBehaviour
         Vector3 dir = mousePosition - transform.position;
         float angle = Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg;
         sprite.transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+    }
+
+    void OnMouseDown()
+    {
+        dragging = true;
     }
 
     public void AddPickup(int value = 1)
