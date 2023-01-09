@@ -6,13 +6,18 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    public event EventHandler OnLevelComplete;
+    public event EventHandler<OnLevelCompleteArgs> OnLevelComplete;
 
     [SerializeField] CharacterController player;
     [SerializeField] SpawnPoint spawnPoint;
     List<Collectable> collectables = new List<Collectable>();
     List<Objective> objectives = new List<Objective>();
 
+    public class OnLevelCompleteArgs : EventArgs
+    {
+        public int health;
+        public int maxHealth;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +54,10 @@ public class LevelManager : MonoBehaviour
         if (completedLevel)
         {
             Debug.Log("LevelManager.cs  Level Complete");
-            OnLevelComplete?.Invoke(this, EventArgs.Empty);
+            OnLevelComplete?.Invoke(this, new OnLevelCompleteArgs {
+                health = player.GetHealth(),
+                maxHealth = player.GetMaxHealth()
+            });
         }
     }
 }

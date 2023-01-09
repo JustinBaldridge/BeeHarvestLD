@@ -856,6 +856,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6426717504802333181, guid: 1b6e49c2d31356441bfa6b1c03742674, type: 3}
   m_PrefabInstance: {fileID: 851968520215608965}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5972482702518198139 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6426717504802333182, guid: 1b6e49c2d31356441bfa6b1c03742674, type: 3}
+  m_PrefabInstance: {fileID: 851968520215608965}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e2d5b1660163ab4f87af6173f1243c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3015051691359883891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -864,6 +875,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 5750424275401221181}
     m_Modifications:
+    - target: {fileID: 6163227685536914575, guid: afbab1b7b8c4dc94bba1a399682c2c17, type: 3}
+      propertyPath: levelManager
+      value: 
+      objectReference: {fileID: 5972482702518198139}
     - target: {fileID: 8815731598320987570, guid: afbab1b7b8c4dc94bba1a399682c2c17, type: 3}
       propertyPath: m_Name
       value: LevelCanvas

@@ -19,6 +19,8 @@ MonoBehaviour:
   dependencies:
   - dependency: {fileID: 2800000, guid: 5f2a108eb023faf43a809979fd3d38f2, type: 3}
     instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: deb376adefa63a94eadde649b15b7813, type: 3}
+    instantiationMode: 0
   - dependency: {fileID: 6426717504802333183, guid: 1b6e49c2d31356441bfa6b1c03742674, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 2800000, guid: deb376adefa63a94eadde649b15b7813, type: 3}

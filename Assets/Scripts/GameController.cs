@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
     int deaths;
     float gameTimer;
 
+    float honeyCollected;
 
     void Awake()
     {
@@ -47,7 +48,7 @@ public class GameController : MonoBehaviour
 
         endUI = FindObjectOfType<Image>();
 
-        endUI.gameObject.SetActive(false);
+        ///endUI.gameObject.SetActive(false);
         
         level.OnLevelComplete += LevelManager_OnLevelComplete;
     }
@@ -72,16 +73,30 @@ public class GameController : MonoBehaviour
         return currentLevel + 1;
     }
 
-    public
+    public int GetLevelCount()
+    {
+        return levels.Count;
+    }
+
+    public void AddHoney(float value)
+    {
+        honeyCollected += value;
+    }
+
+    public float GetHoney()
+    {
+        return honeyCollected;
+    }
+    //public
 
     IEnumerator FinishLevel(int health)
     {
-        endUI.gameObject.SetActive(true);
+        //endUI.gameObject.SetActive(true);
         bee.gameObject.SetActive(false);
-        int maxHealth = bee.GetMaxHealth();
-        honeyFill.GetComponent<Image>().fillAmount += (health / maxHealth) / levels.Count;
+        //int maxHealth = bee.GetMaxHealth();
+        //honeyFill.fillAmount += (health / maxHealth) / levels.Count;
         yield return new WaitForSeconds(1.5f);
-        endUI.gameObject.SetActive(false);
+        //endUI.gameObject.SetActive(false);
         StartCoroutine(LoadLevel(currentLevel));
     }
     
@@ -108,7 +123,7 @@ public class GameController : MonoBehaviour
         Initialize();
     }
 
-    void LevelManager_OnLevelComplete(object sender, EventArgs e)
+    void LevelManager_OnLevelComplete(object sender, LevelManager.OnLevelCompleteArgs e)
     {
         int beeHealth = bee.GetHealth();
         currentLevel++;

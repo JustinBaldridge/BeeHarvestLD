@@ -1369,6 +1369,7 @@ GameObject:
   - component: {fileID: 8815731598320987575}
   - component: {fileID: 8815731598320987568}
   - component: {fileID: 8815731598320987569}
+  - component: {fileID: 6163227685536914575}
   m_Layer: 5
   m_Name: LevelCanvas
   m_TagString: Untagged
@@ -1465,6 +1466,21 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &6163227685536914575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8815731598320987570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d7f0756525e644685689633b2c6ea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelManager: {fileID: 0}
+  levelCompleteScreen: {fileID: 3925597264462330024}
+  honeyFill: {fileID: 2642131353705462127}
 --- !u!1 &8815731598534456065
 GameObject:
   m_ObjectHideFlags: 0
