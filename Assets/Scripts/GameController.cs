@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
     int currentLevel = 0;
     int deaths;
     float gameTimer;
+    private float finalTime;
 
     float honeyCollected;
 
@@ -39,6 +40,11 @@ public class GameController : MonoBehaviour
     {
         Initialize();
         SoundManager.Instance.PlayMusic(Music.game);
+    }
+
+    void Update()
+    {
+        gameTimer += Time.deltaTime;
     }
 
     void Initialize()
@@ -65,6 +71,15 @@ public class GameController : MonoBehaviour
     public float GetTimer()
     {
         return gameTimer;
+    }
+    public void FinalTime()
+    {
+        finalTime = gameTimer;
+    }
+
+    public float GetFinalTime()
+    {
+        return finalTime;
     }
 
     public int GetLevel()
@@ -95,6 +110,10 @@ public class GameController : MonoBehaviour
         //int maxHealth = bee.GetMaxHealth();
         //honeyFill.fillAmount += (health / maxHealth) / levels.Count;
         yield return new WaitForSeconds(1.5f);
+        if (currentLevel == levels.Count - 1)
+        {
+            FinalTime();
+        }
         //endUI.gameObject.SetActive(false);
         StartCoroutine(LoadLevel(currentLevel));
     }
@@ -113,7 +132,7 @@ public class GameController : MonoBehaviour
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(levels[currentLevel]);
         
         
-        Debug.Log("GameController.cs  waiting for level to lead.");
+        Debug.Log("GameController.cs  waiting for level to load.");
         while (!asyncLoad.isDone)
         {
             yield return null;
