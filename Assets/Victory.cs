@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -23,7 +24,8 @@ public class Victory : MonoBehaviour
         fillPercent = GameController.Instance.GetHoney();
         honeyToFill.fillAmount = fillPercent;
         percentText.text = (Mathf.Round((fillPercent * 100)) + "%");
-        timeText.text = (finalTime.ToString());
+        double timeToConvert = Math.Round(finalTime, 2);
+        timeText.text = (timeToConvert.ToString());
 
         StartCoroutine(GameReset());
     }
